@@ -204,13 +204,10 @@ bot.on('message', message =>{
         message.channel.send({embed : xpembed});
     }
 
-    //let userxp2 = xp[message.author.id] ? xp[message.author.id].xp : 0;
-    //let curLevel = Math.floor(0.1 * Math.sqrt(userxp2));
-  // // let userLevel = xp[message.author.id] ? xp[message.author.id].level : 0;
- // if(userLevel < curLevel) {
-    /// Level up!
-   // message.reply(`You've leveled up to level **${curLevel}**! Ain't that dandy?`);
- // }
+    
+
+        
+    
 
 
 
@@ -220,6 +217,7 @@ bot.on('message', message =>{
     switch (args[0].toLowerCase()){
 
 
+        
 
 
         case "roleadd":
@@ -501,53 +499,38 @@ bot.on('message', message =>{
         break;
 
 
+        
+
+
+        
+
         case "help":
             var embedhelp = new Discord.RichEmbed()
-                .addField("/help", "Affiche les commandes dans un channel")
-                .addField("/hh", "Affiche les commandes en message privé !")
-                .addField("`/ban`", "Cette commande permet de bannir un utilisateur ! Pour l'utiliser, faites `/ban @(utilisateur) (raison)` ")
-                .addField("`/kick`", "Cette commande permet de kick un utilisateur ! Pour l'utiliser, faites `/kick @(utilisateur) (raison)` ")
-                 .addField("`/purge`", "Cette commande permet de supprimé des messages beaucoup plus rapidement ! Pour l'utiliser, faites `/purge (nombre de messages)`")
-                 .addField("`/mute`", "Cette commande permet de muté un utilisateur pendant un certain temps. Pour l'utiliser, faites `/mute @(utilisateur) (raison)`")
-                 .addField("`/unmute`", "Cette commande permet d'unmute un utilisateur. Pour l'utiliser, faites `/unmute @(utilisateur)`")
-                 .addField("/warn", "Cette commande permet de warn un utilisateur ! Pour l'utiliser, faites `/warn @(utilisateur) (raison)`")
-                 .addField("`/say`", "Cette commande permet de dire un message dans un embed grâce au bot ! Pour l'utiliser, faites `/say (votre message)`")
-                 .addField("`/ping`", "Grâce à cette commande, tu pourras savoir le ping du bot !") 
-                 .addField("`/membres`","Grâce à cette commande, tu pourras savoir combien de membres a ce discord !" )
-                 .addField("/couleurlist", "Grâce à cette commande, tu pourras savoir toutes les couleurs disponibles sur le serveur !")
-                 .addField("/roleadd", "Grâce à cette commande, tu pourras t'attribruer une couleur disponibles sur le serveur ! `/couleurlist` pour voir les couleurs disponibles !")
                 .setColor("#FFFF00")
                 .setFooter("Idée de commande ? Proposez en MP!")
                 .setAuthor(message.author.username, message.author.avatarURL)
                 .setDescription("Voici les commandes du Land'sBot !")
                 .setTimestamp()
-                message.channel.sendEmbed(embedhelp)
-
-
+                .addField("`Moderation 🔗 : `", "`/ban : Cette commande permet de bannir un utilisateur ! Pour l'utiliser, faites /ban @(utilisateur) (raison)`\n`/kick : Cette commande permet de kick un utilisateur ! Pour l'utiliser, faites /kick @(utilisateur) (raison)`\n`/purge : Cette commande permet de supprimé des messages beaucoup plus rapidement ! Pour l'utiliser, faites /purge (nombre de messages)`\n`/mute : Cette commande permet de muté un utilisateur pendant un certain temps. Pour l'utiliser, faites /mute @(utilisateur) (raison)`\n`/unmute : Cette commande permet d'unmute un utilisateur. Pour l'utiliser, faites /unmute @(utilisateur)`\n`/warn : Cette commande permet de warn un utilisateur ! Pour l'utiliser, faites /warn @(utilisateur) (raison)`")
+                .addField("`Utilitaire 📌 : `", "`/say : Cette commande permet de dire un message dans un embed grâce au bot ! Pour l'utiliser, faites /say (votre message)`\n`/ping : Grâce à cette commande, tu pourras savoir le ping du bot !`\n`/membres : Grâce à cette commande, tu pourras savoir combien de membres a ce discord !`\n`/roleadd : Grâce à cette commande, tu pourras t'attribruer une couleur disponibles sur le serveur ! /couleurlist pour voir les couleurs disponibles !`\n`/couleurlist : Grâce à cette commande, tu pourras savoir toutes les couleurs disponibles sur le serveur !`")
+                .addField("`Fun 🔥 : `", "`En Dev`")
+            message.channel.send(embedhelp)
         break;
 
         case "hh":
             var embedhh = new Discord.RichEmbed()
-                .addField("/help", "Affiche les commandes dans un channel")
-                .addField("/hh", "Affiche les commandes en message privé !")
-                .addField("`/ban`", "Cette commande permet de bannir un utilisateur ! Pour l'utiliser, faites `/ban @(utilisateur) (raison)` ")
-                .addField("`/kick`", "Cette commande permet de kick un utilisateur ! Pour l'utiliser, faites `/kick @(utilisateur) (raison)` ")
-                 .addField("`/purge`", "Cette commande permet de supprimé des messages beaucoup plus rapidement ! Pour l'utiliser, faites `/purge (nombre de messages)`")
-                 .addField("`/mute`", "Cette commande permet de muté un utilisateur pendant un certain temps. Pour l'utiliser, faites `/mute @(utilisateur) (raison)`")
-                 .addField("`/unmute`", "Cette commande permet d'unmute un utilisateur. Pour l'utiliser, faites `/unmute @(utilisateur)`")
-                 .addField("/warn", "Cette commande permet de warn un utilisateur ! Pour l'utiliser, faites `/warn @(utilisateur) (raison)`")
-                 .addField("`/say`", "Cette commande permet de dire un message dans un embed grâce au bot ! Pour l'utiliser, faites `/say (votre message)`")
-                 .addField("`/ping`", "Grâce à cette commande, tu pourras savoir le ping du bot !") 
-                 .addField("`/membres`","Grâce à cette commande, tu pourras savoir combien de membres a ce discord !" )
-                 .addField("/couleurlist", "Grâce à cette commande, tu pourras savoir toutes les couleurs disponibles sur le serveur !")
-                 .addField("/roleadd", "Grâce à cette commande, tu pourras t'attribruer une couleur disponibles sur le serveur ! `/couleurlist` pour voir les couleurs disponibles !")
                 .setColor("#FFFF00")
                 .setFooter("Idée de commande ? Proposez en MP!")
                 .setAuthor(message.author.username, message.author.avatarURL)
                 .setDescription("Voici les commandes du Land'sBot !")
                 .setTimestamp()
-                message.author.send(embedhh)
-                message.reply("Help envoyé en message privé !");
+                .addField("`Moderation 🔗 : `", "`/ban : Cette commande permet de bannir un utilisateur ! Pour l'utiliser, faites /ban @(utilisateur) (raison)`\n`/kick : Cette commande permet de kick un utilisateur ! Pour l'utiliser, faites /kick @(utilisateur) (raison)`\n`/purge : Cette commande permet de supprimé des messages beaucoup plus rapidement ! Pour l'utiliser, faites /purge (nombre de messages)`\n`/mute : Cette commande permet de muté un utilisateur pendant un certain temps. Pour l'utiliser, faites /mute @(utilisateur) (raison)`\n`/unmute : Cette commande permet d'unmute un utilisateur. Pour l'utiliser, faites /unmute @(utilisateur)`\n`/warn : Cette commande permet de warn un utilisateur ! Pour l'utiliser, faites /warn @(utilisateur) (raison)`")
+                .addField("`Utilitaire 📌 : `", "`/say : Cette commande permet de dire un message dans un embed grâce au bot ! Pour l'utiliser, faites /say (votre message)`\n`/ping : Grâce à cette commande, tu pourras savoir le ping du bot !`\n`/membres : Grâce à cette commande, tu pourras savoir combien de membres a ce discord !`\n`/roleadd : Grâce à cette commande, tu pourras t'attribruer une couleur disponibles sur le serveur ! /couleurlist pour voir les couleurs disponibles !`\n`/couleurlist : Grâce à cette commande, tu pourras savoir toutes les couleurs disponibles sur le serveur !`")
+                .addField("`Fun 🔥 : `", "`En Dev`")
+            message.channel.send(embedhh)
+            message.reply("Help envoyé en message privé !");
+        break;
+          
 
 
         break;
