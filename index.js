@@ -527,7 +527,7 @@ bot.on('message', message =>{
                 .addField("`Moderation 🔗 : `", "`/ban : Cette commande permet de bannir un utilisateur ! Pour l'utiliser, faites /ban @(utilisateur) (raison)`\n`/kick : Cette commande permet de kick un utilisateur ! Pour l'utiliser, faites /kick @(utilisateur) (raison)`\n`/purge : Cette commande permet de supprimé des messages beaucoup plus rapidement ! Pour l'utiliser, faites /purge (nombre de messages)`\n`/mute : Cette commande permet de muté un utilisateur pendant un certain temps. Pour l'utiliser, faites /mute @(utilisateur) (raison)`\n`/unmute : Cette commande permet d'unmute un utilisateur. Pour l'utiliser, faites /unmute @(utilisateur)`\n`/warn : Cette commande permet de warn un utilisateur ! Pour l'utiliser, faites /warn @(utilisateur) (raison)`")
                 .addField("`Utilitaire 📌 : `", "`/say : Cette commande permet de dire un message dans un embed grâce au bot ! Pour l'utiliser, faites /say (votre message)`\n`/ping : Grâce à cette commande, tu pourras savoir le ping du bot !`\n`/membres : Grâce à cette commande, tu pourras savoir combien de membres a ce discord !`\n`/roleadd : Grâce à cette commande, tu pourras t'attribruer une couleur disponibles sur le serveur ! /couleurlist pour voir les couleurs disponibles !`\n`/couleurlist : Grâce à cette commande, tu pourras savoir toutes les couleurs disponibles sur le serveur !`")
                 .addField("`Fun 🔥 : `", "`En Dev`")
-            message.channel.send(embedhh)
+            message.author.send(embedhh)
             message.reply("Help envoyé en message privé !");
         break;
           
