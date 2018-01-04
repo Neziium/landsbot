@@ -86,32 +86,32 @@ bot.on('message', message =>{
         }, 2500);
 
 
-        let points = require("./points.json")
+        //let points = require("./points.json")
 
        
 
-        if (message.author.bot) return;
+        //if (message.author.bot) return;
       
-        if (!points[message.author.id]) points[message.author.id] = {
-          points: 0,
-          level: 0
-        };
-        let userData = points[message.author.id];
-        userData.points++;
+        //if (!points[message.author.id]) points[message.author.id] = {
+          //points: 0,
+         ///level: 0
+       // };
+        //let userData = points[message.author.id];
+        //userData.points++;
       
-        let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
-        if (curLevel > userData.level) {
+        ////let curLevel = Math.floor(0.1 * Math.sqrt(userData.points));
+       // if (curLevel > userData.level) {
           // Level up!
-          userData.level = curLevel;
-          message.reply(`Tu es passé level **${curLevel}**! Bien joué !`);
-         }
-      
-        if (message.content.startsWith(prefix + "level")) {
-          message.reply(`Tu es niveau ${userData.level}, avec ${userData.points} xp.`);
-        }
-        fs.writeFile("./points.json", JSON.stringify(points), (err) => {
-          if (err) console.error(err)
-        });
+        //  userData.level = curLevel;
+        //  message.reply(`Tu es passé level **${curLevel}**! Bien joué !`);
+      //   }
+     //
+      //  if (message.content.startsWith(prefix + "level")) {
+      //    message.reply(`Tu es niveau ${userData.level}, avec ${userData.points} xp.`);
+      //  }
+      //  fs.writeFile("./points.json", JSON.stringify(points), (err) => {
+      //    if (err) console.error(err)
+      //  });
       
 
 
