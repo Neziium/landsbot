@@ -735,4 +735,4 @@ bot.on('message', message =>{
 
 
 
-bot.login("Mzk1NTIxNzkzNTI5NDc5MjA4.DSUF7w.V32zAFwyza4GQOeN6GJIrjUW8hc");
+bot.login(process.env.TOKEN);
