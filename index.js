@@ -39,7 +39,7 @@ bot.on('ready', ()=>{
 
 bot.on('guildMemberAdd', member =>{
     let role = member.guild.roles.find("name", "『 Membres 』");
-    member.guild.channels.find('name', 'commandes').send(` :large_orange_diamond: Bienvenue ${member} sur **Bot'sLand**, n'hésite pas à consulter le #information !`)
+    member.guild.channels.find('name', 'commandes').send(` :large_orange_diamond: Bienvenue ${member} sur **Bot'sLand**, n'hésite pas à consulter le <#397058193634754581> !`)
     member.addRole(role)
 })
 
